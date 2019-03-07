@@ -15,22 +15,29 @@ namespace C0696464.W9
         static void Main(string[] args)
         {
 
-        }
-    }
-    public class DelegateExercises
-    {
-        public delegate void MyDelegate();
-        void Method1()
-        {
-            Console.WriteLine("Method1");
-            Console.ReadLine();
+            DelegateExercises delegateExercises = new DelegateExercises();
+            delegateExercises.Method2();
+
         }
 
-        public void Method2()
+        public class DelegateExercises
         {
-            MyDelegate myDelegate = new MyDelegate(Method1);
-            myDelegate();
+            public delegate void MyDelegate();
+            void Method1()
+            {
+                Console.WriteLine("Method1");
+                Console.ReadLine();
+            }
+
+            public void Method2()
+            {
+                MyDelegate myDelegate = new MyDelegate(Method1);
+                myDelegate();
+            }
         }
     }
-
 }
+
+
+    //-------------------------------------------------------
+   
